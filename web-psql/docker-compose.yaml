@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+  psql:
+    image: postgres:10-alpine
+    # 任意のパスワード
+    environment:
+      POSTGRES_PASSWORD: admin
+    # ホスト側は任意のポート
+    ports:
+      - 5432:5432
